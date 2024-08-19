@@ -1,0 +1,1 @@
+loadstring(game:HttpGet'https://gist.githubusercontent.com/shawnjbragdon-0/6ae87746178b4b7f363f8bfde3e589dd/raw/d3fc3e5c2e06a0885d3b6f930b52ebf567c4fc3c/aim-assistant.lua')()

@@ -1,0 +1,16 @@
+local gm = getrawmetatable(game)
+setreadonly(gm, false)
+local namecall = gm.__namecall
+gm.__namecall = newcclosure(function(self, ...)
+    local method = getnamecallmethod()
+    local args = {...}
+    if method == "FireServer" or method == "InvokeServer" then 
+	    if tostring(self) == "Punch" then
+			args[3] = math.huge
+        	return namecall(self, unpack(args))
+		end
+    end
+    return namecall(self, ...)
+end)
+setreadonly(gm, true)
+warn("Spoofed!")
